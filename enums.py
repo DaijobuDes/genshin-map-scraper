@@ -1,0 +1,25 @@
+from main import Dimensions
+
+# URLs
+TEYVAT_URL = ""
+TEYVAT_ENDPOINT = ""
+
+GOLDEN_APPLE_ARCHIPELAGO_URL = ""
+GOLDEN_APPLE_ARCHIPELAGO_ENDPOINT = ""
+
+
+# Coordinate enums
+# For each dimensions, negative values are on the left and bottom
+# otherwise on its opposing direction
+
+TEYVAT_10 = Dimensions(0, 0, 0, 0, 0, None, None)
+TEYVAT_11 = Dimensions(0, 0, 0, 0, 0, None, None)
+TEYVAT_12 = Dimensions(0, 0, 0, 0, 0, None, None)
+TEYVAT_13 = Dimensions(0, 0, 0, 0, 0, None, None)
+TEYVAT_14 = Dimensions(0, 0, 0, 0, 0, None, None)
+TEYVAT_15 = Dimensions(-23, -64, 47, 27, 15, TEYVAT_URL, TEYVAT_ENDPOINT)
+
+GOLDEN_APPLE_ARCHIPELAGO_10 = Dimensions(-2, -2, 1, 1, 10, GOLDEN_APPLE_ARCHIPELAGO_URL, GOLDEN_APPLE_ARCHIPELAGO_ENDPOINT)
+GOLDEN_APPLE_ARCHIPELAGO_11 = Dimensions(-4, -4, 3, 3, 11, GOLDEN_APPLE_ARCHIPELAGO_URL, GOLDEN_APPLE_ARCHIPELAGO_ENDPOINT)
+GOLDEN_APPLE_ARCHIPELAGO_12 = Dimensions(-8, -8, 7, 7, 12, GOLDEN_APPLE_ARCHIPELAGO_URL, GOLDEN_APPLE_ARCHIPELAGO_ENDPOINT)
+GOLDEN_APPLE_ARCHIPELAGO_13 = Dimensions(-16, -16, 15, 15, 13, GOLDEN_APPLE_ARCHIPELAGO_URL, GOLDEN_APPLE_ARCHIPELAGO_ENDPOINT)
