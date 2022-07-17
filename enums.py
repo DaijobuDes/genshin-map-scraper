@@ -7,6 +7,11 @@ TEYVAT_ENDPOINT = ""
 GOLDEN_APPLE_ARCHIPELAGO_URL = ""
 GOLDEN_APPLE_ARCHIPELAGO_ENDPOINT = ""
 
+ENKANOMIYA_URL = ""
+ENKANOMIYA_ENDPOINT = ""
+
+CHASM_URL = ""
+CHASM_ENDPOINT = ""
 
 # Coordinate enums
 # For each dimensions, negative values are on the left and bottom
