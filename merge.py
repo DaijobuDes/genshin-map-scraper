@@ -1,0 +1,75 @@
+from PIL import Image
+from matplotlib.pyplot import imshow
+from enums import *
+import math
+import os
+import numpy as np
+
+def main(obj, str_obj):
+    print(f"Merging {str_obj}")
+    w = (abs(obj.getXmin()) + abs(obj.getXmax())+1) * 256
+    h = (abs(obj.getYmin()) + abs(obj.getYmax())+1) * 256
+
+    print([w, h])
+
+    directory = os.listdir(f"T:\\map-isles\\{str_obj}")
+
+    print(f"Found {len(directory)} files")
+
+    background = Image.new("RGBA", (w, h), (255, 255, 255, 255))
+
+    # Mihoyo only
+    x = 0
+    y = 0
+    ctr = 0
+    for i in range(obj.getXmin(), obj.getXmax()+1):
+        for j in reversed(range(obj.getYmin(), obj.getYmax()+1)):
+            # print(f"tile-{i}_{j}.jpg")
+            # tile = Image.open(f"map-isles\\{str_obj}\\tile-{i}_{j}.jpg")
+            tile = Image.open(f"T:\\map-isles\\{str_obj}\\{i}_{j}_{obj.getZoomValue()}.png")
+            # background.paste(tile, (x*256, y*256))
+            background.paste(tile, (i*256, j*256))
+            ctr += 1
+            if ctr % 100 == 0:
+                print(f"Progress: {round(ctr / len(directory), 5)}")
+            # print(f"Pasted tile position {i} {j}")
+            y += 1
+        y = 0
+        x += 1
+
+    # Appsample
+    # x = 0
+    # y = 0
+    # ctr = 0
+    # for i in range(obj.getXmin(), obj.getXmax()+1):
+    #     for j in reversed(range(obj.getYmin(), obj.getYmax()+1)):
+    #         # print(f"tile-{i}_{j}.jpg")
+    #         tile = Image.open(f"T:\\map-isles\\{str_obj}\\tile-{i}_{j}.jpg")
+    #         background.paste(tile, (x*256, y*256))
+    #         ctr += 1
+    #         if ctr % 100 == 0:
+    #             print(f"Progress: {round(ctr / len(directory), 5)}")
+    #         y += 1
+    #     y = 0
+    #     x += 1
+
+    # display(background)
+    # imshow(np.asarray(background))
+    print("Saving image.")
+    background.save(f"{str_obj}.png")
+    print("Saved.")
+
+
+# obj = TEYVAT_12
+# str_obj = "TEYVAT_12"
+
+array = [
+    # [TEYVAT_15, "TEYVAT_15"],
+    # [TEYVAT_14, "TEYVAT_14"],
+    # [TEYVAT_13, "TEYVAT_13"],
+    # [TEYVAT_12, "TEYVAT_12"],
+    [TEYVAT_P0, "TEYVAT_P0"],
+]
+
+for i in array:
+    main(i[0], i[1])
