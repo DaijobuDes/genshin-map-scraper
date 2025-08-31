@@ -31,7 +31,8 @@ SIMULANKA_ENDPOINT = "map_manage/map/35/e5b74781addbfb04d4ae5271588a7a11"
 MHY_TEYVAT_P0_URL = "https://act-webstatic.hoyoverse.com"
 # MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/9e1c6c4d2bac013bc0cdd81c58733f47" # 5.2
 # MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/b8dda0da78acc2aba67a395117bf0bc2/" # 5.5
-MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/73865667c73faf29f8a0bc9f10d560c7" # 5.6
+# MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/73865667c73faf29f8a0bc9f10d560c7" # 5.6
+MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/84e91c043f30df2655d34a5543be7b17" # 5.8
 # Coordinate enums
 # For each dimensions, negative values are on the left and bottom
 # otherwise on its opposing direction
@@ -85,4 +86,5 @@ SIMULANKA_N3 = Dimensions(0, 0, 3, 3, "N3", "N3", None)
 
 # TEYVAT_P0 = Dimensions(0, 0, 87, 72, "P0", "P0", None) # 5.2
 # TEYVAT_P0 = Dimensions(7, 0, 88, 51, "P0", "P0", None) # 5.5
-TEYVAT_P0 = Dimensions(15, 0, 89, 51, "P0", "P0", None) # 5.6
+# TEYVAT_P0 = Dimensions(15, 0, 89, 51, "P0", "P0", None) # 5.6
+TEYVAT_P0 = Dimensions(21, 4, 106, 59, "P0", "P0", None) # 5.8
