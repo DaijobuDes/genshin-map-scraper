@@ -5,12 +5,17 @@ import math
 import os
 import numpy as np
 
-def main(obj, str_obj):
+def main(obj: Dimensions, str_obj):
     print(f"Merging {str_obj}")
-    w = (abs(obj.getXmin()) + abs(obj.getXmax())+1) * 256
-    h = (abs(obj.getYmin()) + abs(obj.getYmax())+1) * 256
+    # w = (abs(obj.getXmin()) + abs(obj.getXmax())+1) * 256
+    # h = (abs(obj.getYmin()) + abs(obj.getYmax())+1) * 256
+
+    # Mihoyo
+    w = (abs(obj.getXmax()) - abs(obj.getXmin())+1) * 256
+    h = (abs(obj.getYmax()) - abs(obj.getYmin())+1) * 256
 
     print([w, h])
+
 
     directory = os.listdir(f"T:\\map-isles\\{str_obj}")
 
@@ -22,13 +27,16 @@ def main(obj, str_obj):
     x = 0
     y = 0
     ctr = 0
+    offsetX = obj.getXmin()
+    offsetY = obj.getYmin()
+    print([offsetX, offsetY])
     for i in range(obj.getXmin(), obj.getXmax()+1):
         for j in reversed(range(obj.getYmin(), obj.getYmax()+1)):
             # print(f"tile-{i}_{j}.jpg")
             # tile = Image.open(f"map-isles\\{str_obj}\\tile-{i}_{j}.jpg")
             tile = Image.open(f"T:\\map-isles\\{str_obj}\\{i}_{j}_{obj.getZoomValue()}.png")
             # background.paste(tile, (x*256, y*256))
-            background.paste(tile, (i*256, j*256))
+            background.paste(tile, ((i-offsetX)*256, (j-offsetY)*256))
             ctr += 1
             if ctr % 100 == 0:
                 print(f"Progress: {round(ctr / len(directory), 5)}")
