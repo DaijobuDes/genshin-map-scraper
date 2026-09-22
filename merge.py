@@ -4,6 +4,11 @@ from enums import *
 import math
 import os
 import numpy as np
+from process_transparency import process_transparency
+
+# Transparent blocks
+# full transparent b9688cf5174db38d1771ba15232ebdd80e1d2af8eb1d21f3a4512bf809ac6850
+
 
 def main(obj: Dimensions, str_obj):
     print(f"Merging {str_obj}")
@@ -34,7 +39,8 @@ def main(obj: Dimensions, str_obj):
         for j in reversed(range(obj.getYmin(), obj.getYmax()+1)):
             # print(f"tile-{i}_{j}.jpg")
             # tile = Image.open(f"map-isles\\{str_obj}\\tile-{i}_{j}.jpg")
-            tile = Image.open(f"T:\\map-isles\\{str_obj}\\{i}_{j}_{obj.getZoomValue()}.png")
+            tile = Image.open(f"T:\\map-isles\\{str_obj}\\{i}_{j}_{obj.getZoomValue()}.png").convert("RGBA")
+            tile = process_transparency(tile)
             # background.paste(tile, (x*256, y*256))
             background.paste(tile, ((i-offsetX)*256, (j-offsetY)*256))
             ctr += 1
@@ -64,7 +70,7 @@ def main(obj: Dimensions, str_obj):
     # display(background)
     # imshow(np.asarray(background))
     print("Saving image.")
-    background.save(f"{str_obj}.png")
+    background.save(f"T:\\{str_obj}.png")
     print("Saved.")
 
 
