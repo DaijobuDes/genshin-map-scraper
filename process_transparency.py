@@ -9,7 +9,7 @@ def process_transparency(img):
     has_transparency = any(pixel < 255 for pixel in alpha_data)
 
     if has_transparency:
-        print("Transparent pixels detected. Updating colors...")
+        # print("Transparent pixels detected. Updating colors...")
 
         pixels = img.load()
         width, height = img.size

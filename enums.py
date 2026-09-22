@@ -28,6 +28,9 @@ SEA_OF_BYGONE_ERA_ENDPOINT = "gim/map-bygone-eras/v1"
 SIMULANKA_URL = "https://act-webstatic.hoyoverse.com"
 SIMULANKA_ENDPOINT = "map_manage/map/35/e5b74781addbfb04d4ae5271588a7a11"
 
+FROST_MOON_URL = SIMULANKA_URL
+FROST_MOON_P0_ENDPOINT = "map_manage/map/40/ddd32df1233f47e4f6dd5bbf7294112f"
+
 MHY_TEYVAT_P0_URL = "https://act-webstatic.hoyoverse.com"
 # MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/9e1c6c4d2bac013bc0cdd81c58733f47" # 5.2
 # MHY_TEYVAT_P0_ENDPOINT = "map_manage/map/2/b8dda0da78acc2aba67a395117bf0bc2/" # 5.5
@@ -88,6 +91,8 @@ SIMULANKA_P0 = Dimensions(0, 0, 31, 31, 13, "P0", None)
 SIMULANKA_N1 = Dimensions(0, 0, 15, 15, "N1", "N1", None)
 SIMULANKA_N2 = Dimensions(0, 0, 7, 7, "N2", "N2", None)
 SIMULANKA_N3 = Dimensions(0, 0, 3, 3, "N3", "N3", None)
+
+FROST_MOON_P0 = Dimensions(1, 6, 38, 25, "P0", "P0", None) # 6.7 / Luna VIII // raw 0, 0, 39, 31
 
 # TEYVAT_P0 = Dimensions(0, 0, 87, 72, "P0", "P0", None) # 5.2
 # TEYVAT_P0 = Dimensions(7, 0, 88, 51, "P0", "P0", None) # 5.5

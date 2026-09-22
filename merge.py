@@ -82,6 +82,7 @@ array = [
     # [TEYVAT_14, "TEYVAT_14"],
     # [TEYVAT_13, "TEYVAT_13"],
     # [TEYVAT_12, "TEYVAT_12"],
+    # [FROST_MOON_P0, "FROST_MOON_P0"],
     [TEYVAT_P0, "TEYVAT_P0"],
 ]
 

@@ -103,6 +103,11 @@ def main(obj: Dimensions, path) -> None:
             #     url = f"{maps.getURL()}/{maps.getEndpoint()}/{maps.getZoomValue()}/{filename(i, j)}\n"
             #     f.write(url)
 
+            # Mihoyo (FROST_MOON_P0)
+            # with open(f'{path}-urls.txt', 'a') as f:
+            #     url = f"{FROST_MOON_URL}/{FROST_MOON_P0_ENDPOINT}/{i}_{j}_{maps.getZoomValue()}.png\n"
+            #     f.write(url)
+
             # Mihoyo
             with open(f'{path}-urls.txt', 'a') as f:
                 url = f"{MHY_TEYVAT_P0_URL}/{MHY_TEYVAT_P0_ENDPOINT}/{i}_{j}_{maps.getZoomValue()}.png\n"
@@ -125,6 +130,7 @@ if __name__ == '__main__':
         # [TEYVAT_14, "TEYVAT_14"],
         # [TEYVAT_13, "TEYVAT_13"],
         # [TEYVAT_12, "TEYVAT_12"],
+        # [FROST_MOON_P0, "FROST_MOON_P0"],
         [TEYVAT_P0, "TEYVAT_P0"],
     ]
 
